@@ -100,9 +100,12 @@ function Dashboard() {
           <FaDollarSign className="card-icon" />
           <h3>Ventas</h3>
           <h2>
-            $
-            {totalVentas.toLocaleString("es-AR")}
-          </h2>
+  {totalVentas.toLocaleString("es-AR", {
+    style: "currency",
+    currency: "ARS",
+    maximumFractionDigits: 0,
+  })}
+</h2>
           <small>Total vendido</small>
         </div>
 
